@@ -17,7 +17,7 @@ spec:
           serviceAccountName: gitops-serviceaccount
           containers:
           - name: gitops-operator
-            image: jehadnasser/demo-go-app:latest
+            image: jehadnasser/gitops-operator-tools:v0.1.0
             command: [sh, -e, -c]
             args:
             - git clone https://github.com/jehadnasser/demo-deploy.git /tmp/example &&
