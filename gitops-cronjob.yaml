@@ -20,6 +20,6 @@ spec:
             image: jehadnasser/gitops-operator-tools:v0.1.0
             command: [sh, -e, -c]
             args: 
-            - git clone git@github.com:jehadnasser/demo-k8s-deploy.git /tmp/example &&
+            - git clone https://github.com/jehadnasser/demo-k8s-deploy.git /tmp/example &&
               kubectl apply -f /tmp/example/namespace.yaml &&
               find /tmp/example -name '*.yaml' ! -name 'namespace.yaml' -exec kubectl apply -f {} \;
