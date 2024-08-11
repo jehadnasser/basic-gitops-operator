@@ -11,7 +11,7 @@ kind create cluster --config kind-cluster-configs.yaml
 kubectl apply -f operator-helpers.yaml -f gitops-cronjob.yaml
 
 # It will clone and deploy this project each 2 minutes(see the cronjob)
-# https://github.com/jehadnasser/demo-deploy
+# https://github.com/jehadnasser/demo-k8s-deploy
 
 # to imitate reconcile
 kubectl create job --from=cronjob/gitops-cron gitops-cron-XXXX
